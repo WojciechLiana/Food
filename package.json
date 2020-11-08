@@ -19,6 +19,7 @@
     "html-webpack-plugin": "4.5.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "react-simple-timefield": "3.2.3",
     "webpack": "4.41.3",
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.11.0"
