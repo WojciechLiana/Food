@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {Fragment, useState} from "react";
 import {Name} from "./Name";
 import {PreparationTime} from "./PreparationTime";
 import {Type} from "./Type";
@@ -21,8 +21,7 @@ function Form() {
         handlingFnc(event.target.value);
     };
 
-
-    const onHandleSubmit = (e)=>{
+    const onHandleSubmit = (e) => {
         e.preventDefault();
         console.log("wysyłam");
     };
@@ -36,13 +35,13 @@ function Form() {
 
             <Type type={type} handleType={onHandle.bind(this, setType)}/>
 
-            <Slices slices={slices} handleSlices={onHandle.bind(this, setSlices)}/>
+            <Slices slices={slices} handleSlices={onHandle.bind(this, setSlices)}  type={type}/>
 
-            <Diameter diameter={diameter} handleDiameter={onHandle.bind(this, setDiameter)}/>
+            <Diameter diameter={diameter} handleDiameter={onHandle.bind(this, setDiameter)}  type={type}/>
 
-            <Spaciness spaciness={spaciness} handleSpaciness={onHandle.bind(this, setSpaciness)}/>
+            <Spaciness spaciness={spaciness} handleSpaciness={onHandle.bind(this, setSpaciness)}  type={type}/>
 
-            <Bread bread={bread} handleBread={onHandle.bind(this, setBread)}/>
+            <Bread bread={bread} handleBread={onHandle.bind(this, setBread)} type={type}/>
 
             <input type="submit" value="Submit" />
 
